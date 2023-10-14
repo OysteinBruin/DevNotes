@@ -7,9 +7,9 @@ https://stackoverflow.com/questions/51445846/elasticsearch-max-virtual-memory-ar
 
 For MS Windows users, using wsl subsystem. Open powershell, run:
 
-`wsl -d docker-desktop`
+```wsl -d docker-desktop```
 then
-`sysctl -w vm.max_map_count=262144`
+```sysctl -w vm.max_map_count=262144```
 ---
 
 Add dummy exception trigger to WeatherForecastController.cs
