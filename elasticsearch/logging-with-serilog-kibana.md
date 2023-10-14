@@ -1,7 +1,7 @@
 ## Logging into Elasticserach with Serilog and viewing logs with Kibana
 
 Example app using default Asp.Net Core 7 Web Api template with Serilog, Elasticsearch and Kibana running in dockr containers.
-
+---
 NOTE - Issue with Elastsearch container: Failing with error Max virtual memory areas vm.max_map_count 65530 is too low, increase to at least 262144:
 https://stackoverflow.com/questions/51445846/elasticsearch-max-virtual-memory-areas-vm-max-map-count-65530-is-too-low-inc
 
@@ -10,9 +10,7 @@ For MS Windows users, using wsl subsystem. Open powershell, run:
 `wsl -d docker-desktop`
 then
 `sysctl -w vm.max_map_count=262144`
-
-
-
+---
 
 Add dummy exception trigger to WeatherForecastController.cs
 
