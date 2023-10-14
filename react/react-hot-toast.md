@@ -1,0 +1,1 @@
+https://github.com/timolins/react-hot-toast
