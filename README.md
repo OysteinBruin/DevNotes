@@ -1,2 +1,6 @@
-# DevNotes
-A collection of concise write-ups on small things I learn day to day across a variety of languages and technologies.
+
+
+![Repository Banner](_img/readme/header-image.png)
+
+---
+This repository is my personal knowledge-base. Here you'll find code-snippets, technical documentation, and command reference for various tools, and technologies. I use this repository as a reference for my daily work. I hope you find it useful too.
