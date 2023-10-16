@@ -70,3 +70,30 @@ helm repo remove bitnami
 #delete kind cluster
 kind delete cluster --name my-k8s-app
 ```
+
+---
+### Demo - deploy a local docker image
+
+1. Follow step 1. and 2. above
+2. Loading an Image Into Your Cluster
+```powershell
+kind load docker-image my-custom-image-0 my-custom-image-1 --name my-kubernetes-app
+```
+
+3. Run kubectl port forwarding to be able to view the app in your browser:
+
+```powershell
+#Get Pod name 
+kubectl get pods
+
+#Port forwarding 
+kubectl port-forward <pod name> 8080:8080
+```
+
+Access the app in a browser on http://localhost:8080
+
+5. Cleanup
+   Follow step 5. above
+
+
+kind load docker-image test-img:1.0 --name test-cluster
