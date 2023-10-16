@@ -11,8 +11,23 @@
 - Verify installation:
 
 ```powershell
+# display a listing of available commands
 helm
+
+# installed version
+helm version --short
+
 ```
-should display a listing of available commands
 
 ---
+
+Helm three is not configures to use any repository.
+Install the official helm repo
+`helm repo add stable https://charts.helm.sh/stable`
+
+Install a mysql demo in the cluster
+`helm install demo-mysql stable/mysql`
+
+
+`kubectl get all | ggrep mysql`
+
