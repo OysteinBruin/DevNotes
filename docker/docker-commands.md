@@ -1,7 +1,20 @@
 ### Docker Build
 
--f dockerfile path
--t image tag
+
+```powershell	
+-f #dockerfile path  
+-t #image tag  
+```	
+
+```powershell	
+# show values computed by helm
+helm get all release-name
+```	
+
+```powershell	
+# show values computed by helm
+helm get all release-name
+```	
 
 
 `docker build -f ./Path/To/Dockerfile -t myname/my-img-name:0.1.0 .` 
@@ -12,10 +25,13 @@
 
 ### Docker Run
 
--rm remove intermediate images
+```powershell	
+-rm #remove intermediate images
 -p port mapping
 -e environment varialbles
 -d detached
+```	
+
 `docker run -d --restart=always -p 8080:80 image_name:version` oysteinbruin/weather-service:0.1.0 
 `docker build -f ./Weather.Service/Dockerfile -t oysteinbruin/weather-service:0.1.1 .`
 

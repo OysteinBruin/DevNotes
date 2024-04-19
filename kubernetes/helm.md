@@ -29,5 +29,36 @@ Install a mysql demo in the cluster
 `helm install demo-mysql stable/mysql`
 
 
-`kubectl get all | ggrep mysql`
+`kubectl get all`
 
+Cleanup  
+`helm uninstall demo-mysql`
+
+Environment variables  
+`helm env`
+
+### Helm commands  
+![Helm commands image](/_img/helm/helm-commands.png)
+
+Test helm templates before installing charts, 2 ways:   
+![Helm commands image](/_img/helm/helm-test-commands.png)
+
+### Helm templates
+
+- helm template values:
+    - Access by {{.Values.property-name.sub-property-name}}
+    - Ways to define values:
+        - helm install--set key=value
+        - values.yaml
+        - other-file.yaml (helm install -f other-file.yaml)
+    - a defined sche,a with values.schema.json in the root to validate values.yaml gives error if values are not valid when running helm install
+
+- values from built-in object:
+    - .Release (from releases runtime data)
+    - .Chart (data from chart file)
+    - .Capabilities (kubernetes cluster data)
+
+```powershell	
+# show values computed by helm
+helm get all release-name
+```	
